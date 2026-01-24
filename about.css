@@ -1,0 +1,131 @@
+#founder{
+    min-height: 100vh;
+}
+:root{
+  --brand: #1d2f6f;
+  --accent: #ff6600;
+  --text: #121212;
+  --muted: #666;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --shadow: 0 14px 40px rgba(0,0,0,.10);
+  --radius: 16px;
+}
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+.container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+.section{
+  padding: 50px 0;
+}
+.section.alt{
+  background: #fff;
+}
+
+.center{
+  text-align: center;
+}
+.subtext{
+  color: var(--muted);
+  margin-top: 8px;
+  margin-bottom: 26px;
+}
+.founder-grid{
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.founder-photo img{
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
+.founder-content h2{
+  margin: 0 0 10px;
+  color: var(--brand);
+  font-size: 30px;
+}
+.lead{
+  margin: 0 0 16px;
+  color: #222;
+}
+
+.info-cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 18px 0;
+}
+.info-card{
+  background: var(--card);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  border: 1px solid rgba(29,47,111,.08);
+}
+.info-card h3{
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: var(--brand);
+}
+.info-card p{
+  margin: 0;
+  color: #222;
+  font-size: 14px;
+}
+.btn{
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .05s ease, opacity .2s ease;
+}
+.btn:hover{ opacity: .95; }
+.btn:active{ transform: scale(.99); }
+
+.btn-small{
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.btn-ghost{
+  background: transparent;
+  border: 2px solid rgba(255,255,255,.6);
+}
+.btn-ghost:hover{
+  border-color: #fff;
+}
+
+.btn-light{
+  background: #fff;
+  color: var(--brand);
+}
+@media (max-width: 900px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .stats{ grid-template-columns: 1fr; }
+  .founder-grid{ grid-template-columns: 1fr; }
+  .values-grid{ grid-template-columns: 1fr; }
+  .hero-text h1{ font-size: 32px; }
+}

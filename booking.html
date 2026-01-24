@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking</title>
+  <link rel="stylesheet" href="/booking.css">
+</head>
+<body>
+  <div class="booking-form-wrap" id="bookings">
+  <form
+    class="booking-form"
+    action="https://formspree.io/f/mwvlaelv"
+    method="POST"
+  >
+    <h2 class="full">Book a Lesson</h2>
+
+    <label>
+      Name
+      <input type="text" name="name" placeholder="Your name" required>
+    </label>
+
+    <label>
+      Surname
+      <input type="text" name="surname" placeholder="Your surname" required>
+    </label>
+
+    <label>
+      Phone Number
+      <input type="tel" name="phone" placeholder="+27 00 000 0000" required>
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" placeholder="you@example.com" required>
+    </label>
+
+    <label class="full">
+      Grade
+      <select name="grade" required>
+        <option value="">-- Select grade --</option>
+        <option>Grade 1</option>
+        <option>Grade 2</option>
+        <option>Grade 3</option>
+        <option>Grade 4</option>
+        <option>Grade 5</option>
+        <option>Grade 6</option>
+        <option>Grade 7</option>
+      </select>
+    </label>
+
+    <!-- Subjects (checkboxes so they can select more than one) -->
+    <div class="full">
+      <div style="font-size:14px; margin-bottom:8px; color:#1b1b1b;">Subjects</div>
+      <div class="subjects-grid">
+        <label><input type="checkbox" name="subjects[]" value="IsiZulu"> IsiZulu</label>
+        <label><input type="checkbox" name="subjects[]" value="English"> English</label>
+        <label><input type="checkbox" name="subjects[]" value="Mathematics"> Mathematics</label>
+        <label><input type="checkbox" name="subjects[]" value="Natural Science"> Natural Science</label>
+      </div>
+      <div class="help-text">Select all subjects you want help with.</div>
+    </div>
+
+    <!-- Calendar -->
+    <label class="full">
+      Preferred Date & Time
+      <input type="datetime-local" name="preferred_datetime" required>
+      <div class="help-text">Choose your preferred lesson date and time.</div>
+    </label>
+
+    <label class="full">
+      Notes (optional)
+      <textarea name="message" rows="4" placeholder="Anything we should know? (topics, goals, etc.)"></textarea>
+    </label>
+
+    <!-- Optional: redirect after submit -->
+    <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you">
+
+    <button type="submit">Book Now</button>
+  </form>
+</div>
+</body>
+</html>
+
+ 
+
+
+
+

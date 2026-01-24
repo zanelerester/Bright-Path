@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.homepage{
+  position: sticky;
+}
+.navbar1 {
+  background-color: rgb(26, 41, 114);
+  padding: 15px 40px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+  
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HAMBURGER BUTTON */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  display: block;
+}
+.homebanner1{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0)),
+    url("/Images/female-teacher-assisting-pupils-with-class-homework-mentoring.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+}
+.homebanner1 h1{
+    color: orangered;
+    text-align: center;
+    padding: 250px 0px 0px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 36px;
+    
+}
+.bookbut1{
+    background-color: rgb(26, 41, 114);
+    color: white;
+    align-items: center;
+    height: 60px;
+    margin-left: 600px;
+    margin-top: 20px;
+    width: 150px;
+    font-weight: bold;
+    border: 5px solid #ffff;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .menu-btn {
+     background: none;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 2000; /* stays on top */
+  }
+  /* The 3 lines */
+.menu-btn span{
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  transition: transform .25s ease, opacity .2s ease;
+}
+/* line positions */
+.menu-btn span:nth-child(1){ transform: translateY(-8px); }
+.menu-btn span:nth-child(2){ transform: translateY(0); }
+.menu-btn span:nth-child(3){ transform: translateY(8px); }
+
+/* OPEN state = X */
+.menu-btn.open span:nth-child(1){ transform: rotate(45deg); }
+.menu-btn.open span:nth-child(2){ opacity: 0; }
+.menu-btn.open span:nth-child(3){ transform: rotate(-45deg); }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgb(26, 41, 114);
+    margin-top: 15px;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+  .homebanner1 h1 {
+    font-size: 24px;
+    padding:  195px 0px 0px 0px;
+  
+    
+  }
+  .bookbut1{
+    height: 40px;
+    margin-left: 130px;
+    
+  }
+}
+

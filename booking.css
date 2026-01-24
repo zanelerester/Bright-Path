@@ -1,0 +1,101 @@
+ .booking-form-wrap{
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 28px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 14px 40px rgba(0,0,0,.12);
+    font-family: Arial, sans-serif;
+  }
+
+  .booking-form-wrap h2{
+    margin: 0 0 18px;
+    font-size: 28px;
+    color: #1d2f6f;
+  }
+
+  .booking-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .booking-form label{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    color: #1b1b1b;
+  }
+
+  .booking-form input,
+  .booking-form select,
+  .booking-form textarea{
+    padding: 12px 12px;
+    border: 1px solid #d8dbe3;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border .2s ease, box-shadow .2s ease;
+    background: #fff;
+  }
+
+  .booking-form input:focus,
+  .booking-form select:focus,
+  .booking-form textarea:focus{
+    border-color: #1d2f6f;
+    box-shadow: 0 0 0 4px rgba(29,47,111,.15);
+  }
+
+  .booking-form .full{
+    grid-column: 1 / -1;
+  }
+
+  .help-text{
+    font-size: 12px;
+    color: #666;
+    margin-top: -4px;
+  }
+
+  .subjects-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #d8dbe3;
+    border-radius: 10px;
+  }
+
+  .subjects-grid label{
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .subjects-grid input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+  }
+
+  .booking-form button{
+    grid-column: 1 / -1;
+    border: none;
+    background: #ff6600;
+    color: #fff;
+    padding: 14px 18px;
+    border-radius: 999px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform .05s ease, opacity .2s ease;
+  }
+
+  .booking-form button:hover{ opacity: .95; }
+  .booking-form button:active{ transform: scale(.99); }
+
+  /* Mobile */
+  @media (max-width: 700px){
+    .booking-form{ grid-template-columns: 1fr; }
+    .subjects-grid{ grid-template-columns: 1fr; }
+  }

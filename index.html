@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightPath</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/pricing.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="values.css">
+</head>
+<body>
+   
+
+    <section class="homepage" id="homepage">
+  <div class="navbar1">
+  <nav>
+    <img class="logo" src="/Images/WhatsApp_Image_2026-01-08_at_14.58.46-removebg-preview.png" alt="Bright Path logo">
+
+    <!-- ☰ Hamburger button -->
+    <button class="menu-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#homepage">Home</a></li>
+      <li><a href="/booking.html">Book</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#grades">Grades</a></li>
+    </ul>
+    
+  </nav>
+</div>
+<script>
+  const menuBtn = document.querySelector(".menu-btn");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("show");
+    menuBtn.classList.toggle("open", isOpen);
+    menuBtn.setAttribute("aria-expanded", isOpen);
+  });
+
+  // Optional: close menu when a link is clicked
+  document.querySelectorAll(".nav-links a").forEach(a => {
+    a.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      menuBtn.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
+
+<div class="homebanner1">
+    <h1>Building Bright Minds, One Lesson at a Time</h1>
+    <a href="/booking.html"><button class="bookbut1">Book Now</button></a>
+
+</div>
+       
+    </section>
+    <section class="grades" id="grades">
+      <h2 class="section-title">Grades We Offer</h2>
+
+  <div class="grades-grid">
+
+    <!-- Grade 1 -->
+    <div class="grade-card">
+      <h3>Grade 1</h3>
+      <ul>
+        <li>IsiZulu</li>
+        <li>English</li>
+        <li>Mathematics</li>
+      </ul>
+      <a href="/booking.html"><button >Book Now</button></a>
+    </div>
+
+    <!-- Grade 2 -->
+    <div class="grade-card">
+      <h3>Grade 2</h3>
+      <ul>
+        <li>IsiZulu</li>
+        <li>English</li>
+        <li>Mathematics</li>
+      </ul>
+      <a href="/booking.html"><button >Book Now</button></a>
+    </div>
+
+    <!-- Grade 3 -->
+    <div class="grade-card">
+      <h3>Grade 3</h3>
+      <ul>
+        <li>IsiZulu</li>
+        <li>English</li>
+        <li>Mathematics</li>
+      </ul>
+      <a href="/booking.html"><button >Book Now</button></a>
+    </div>
+
+    <!-- Grade 4 -->
+    <div class="grade-card">
+      <h3>Grade 4</h3>
+      <ul>
+        <li>Mathematics</li>
+        <li>Natural Science</li>
+        <li>English</li>
+      </ul>
+      <a href="/booking.html"><button >Book Now</button></a>
+    </div>
+
+    <!-- Grade 5 -->
+    <div class="grade-card">
+      <h3>Grade 5</h3>
+      <ul>
+        <li>Mathematics</li>
+        <li>Natural Science</li>
+        <li>English</li>
+      </ul>
+      <a href="/booking.html"><button >Book Now</button></a>
+    </div>
+
+    <!-- Grade 6 -->
+    <div class="grade-card">
+      <h3>Grade 6</h3>
+      <ul>
+        <li>Mathematics</li>
+        <li>Natural Science</li>
+        <li>English</li>
+      </ul>
+      <a href="/booking.html"><button >Book Now</button></a>
+    </div>
+
+  </div>
+
+    </section>
+    <section class="section" id="founder">
+    <div class="container founder-grid">
+      <div class="founder-photo">
+        <!-- Replace src with your image path if you want -->
+        <!-- Example: images/nozipho.jpg -->
+        <img src="/Images/WhatsApp Image 2026-01-24 at 16.55.27.jpeg" alt="Nozipho Sibisi" />
+      </div>
+
+      <div class="founder-content">
+        <h2>Meet Nozipho Sibisi</h2>
+        <p class="lead">
+          Nozipho Sibisi is a dedicated educator who believes that every learner can succeed with the right
+          support, encouragement, and strategy.
+        </p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <h3>Education</h3>
+            <p>
+              Bachelor of Education (Intermediate Phase), specialising in <strong>Natural Science</strong> and
+              <strong>Mathematics</strong>, from the <strong>University of the Free State</strong>.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Experience</h3>
+            <p>
+              Worked at a private school in Pretoria for <strong>3 months</strong> (temporary role) and served as an
+              <strong>Education Assistant</strong> for <strong>8 months</strong>.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Currently</h3>
+            <p>
+              Learning Coordinator for a retail company in <strong>Kempton Park</strong>, supporting training and
+              learning programmes.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          Her teaching style is calm, structured, and learner-focused breaking down concepts into simple steps and
+          helping learners develop strong foundations. Whether your child needs extra support or wants to level up,
+          Nozipho creates a safe space to ask questions, practise, and improve.
+        </p>
+
+        <a class="btn" href="#contact">Book Now</a>
+      </div>
+    </div>
+  </section>
+  <!-- Values -->
+  <section class="section alt" id="values">
+    <div class="container">
+      <h2 class="center">What We Stand For</h2>
+      <p class="center subtext">
+        Our lessons are built on care, consistency, and clear progress.
+      </p>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <h3>Confidence</h3>
+          <p>We celebrate small wins and build momentum through practise and encouragement.</p>
+        </div>
+        <div class="value-card">
+          <h3>Clarity</h3>
+          <p>Concepts are explained in a simple, step-by-step way that makes learning feel achievable.</p>
+        </div>
+        <div class="value-card">
+          <h3>Consistency</h3>
+          <p>Progress comes from regular lessons, guided practice, and supportive feedback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+   <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> BrightPath. All rights reserved.</p>
+      <p class="muted">Built with care for growing minds.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
