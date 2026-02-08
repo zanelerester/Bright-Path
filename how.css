@@ -1,0 +1,166 @@
+/* HOW WE WORK (INFOGRAPHICS) - CSS */
+
+.how-we-work{
+  padding: 60px 16px;
+  background: #f5f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.hw-container{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hw-title{
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 34px;
+  color: #1d2f6f;
+}
+
+.hw-subtitle{
+  text-align: center;
+  margin: 0 auto 34px;
+  max-width: 640px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Steps layout */
+.hw-steps{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  position: relative;
+}
+
+/* Step block */
+.hw-step{
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 14px;
+  align-items: start;
+  position: relative;
+}
+
+/* Badge (1,2,3,4) */
+.hw-badge{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ff6600;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  margin-top: 6px;
+  z-index: 2;
+}
+
+/* Connecting line */
+.hw-step::before{
+  content: "";
+  position: absolute;
+  left: 22px;          /* aligns with badge center */
+  top: 52px;           /* starts under badge */
+  bottom: -18px;       /* extends to next step */
+  width: 2px;
+  background: rgba(29,47,111,.18);
+}
+
+.hw-step:last-child::before{
+  display: none;
+}
+
+/* Card */
+.hw-card{
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px 18px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.10);
+  border: 1px solid rgba(29,47,111,.08);
+}
+
+.hw-card h3{
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #1d2f6f;
+}
+
+.hw-card p{
+  margin: 0;
+  color: #222;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Tags */
+.hw-tags{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.hw-tag{
+  background: rgba(29,47,111,.08);
+  color: #1d2f6f;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* CTA */
+.hw-cta{
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hw-btn{
+  background: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: opacity .2s ease, transform .05s ease;
+}
+
+.hw-btn:hover{ opacity: .95; }
+.hw-btn:active{ transform: scale(.99); }
+
+.hw-note{
+  color: #555;
+  font-size: 14px;
+}
+
+/* Desktop enhancement: 2-column timeline */
+@media (min-width: 900px){
+  .hw-steps{
+    gap: 22px;
+  }
+
+  .hw-step{
+    grid-template-columns: 54px 1fr;
+  }
+
+  .hw-card{
+    padding: 20px 22px;
+  }
+}
+
+/* Mobile friendliness */
+@media (max-width: 520px){
+  .hw-title{ font-size: 26px; }
+  .hw-subtitle{ font-size: 15px; margin-bottom: 24px; }
+  .hw-card h3{ font-size: 17px; }
+  .hw-card p{ font-size: 15px; }
+}
